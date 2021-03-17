@@ -4,6 +4,7 @@ from bpy.types import GizmoGroup, WorkSpaceTool
 import numpy as np
 
 from .algo import *
+from . import ICON_NAME
 
 
 class OP_orbit_xz_pin_obj(bpy.types.Operator):
@@ -192,7 +193,7 @@ class Tool(WorkSpaceTool):
     bl_idname = "layouter.tool_pin_obj"
     bl_label = "Orbit Camera with object pinned."
     bl_description = ""
-    bl_icon = "layouter"
+    bl_icon = ICON_NAME
     bl_widget = None
     bl_keymap = (
         ("layouter.op_orbit_xz_pin_obj", {"type": 'LEFTMOUSE', "value": 'PRESS'},
